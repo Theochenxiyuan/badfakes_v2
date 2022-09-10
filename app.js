@@ -77,7 +77,6 @@ next.addEventListener('click', () => {
 });
 
 start.addEventListener('click', () => {
-  main.classList.remove('d-none');
   modalBegin.style.display = 'none';
   questionNumber = 1;
   updateQuestion();
