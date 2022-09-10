@@ -126,12 +126,14 @@ end.addEventListener('click', () => {
   if (correctRate < cutOff) {
     loseSound.play();
     titleS.classList.add('text-danger');
-    bodyS.innerText =
-      'You have failed this test. Your ability to identify Deepfakes still needs to be improved. ';
+    bodyS.innerHTML =
+      '<p>You have failed this test. Your ability to identify Deepfakes still needs to be improved. </p>' +
+      '<a id="credits" href="Credits.pdf">View Credits Page (PDF)</a>';
   } else {
     winSound.play();
     titleS.classList.add('text-success');
     bodyS.innerText =
-      'You have passed this test. Your ability to identify Deepfakes is good enough! ';
+      '<p>You have passed this test. Your ability to identify Deepfakes is good enough! </p>' +
+      '<a id="credits" href="Credits.pdf">View Credits Page (PDF)</a>';
   }
 });
