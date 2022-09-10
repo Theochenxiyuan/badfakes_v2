@@ -18,7 +18,7 @@ const explanations = [
 ];
 
 class Question {
-  constructor(type, ans, num, exp = 'No explanation.') {
+  constructor(type, ans, num, exp = 'No explanation needed.') {
     this.type = type;
     this.ans = ans;
     this.num = num;
