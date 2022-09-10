@@ -135,7 +135,7 @@ end.addEventListener('click', () => {
   } else {
     winSound.play();
     titleS.classList.add('text-success');
-    bodyS.innerText =
+    bodyS.innerHTML =
       '<p>You have passed this test. Your ability to identify Deepfakes is good enough! </p>' +
       '<a id="credits" href="Credits.pdf">View Credits Page (PDF)</a>';
   }
