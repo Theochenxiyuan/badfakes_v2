@@ -28,6 +28,8 @@ const bodyS = document.querySelector('#modal-begin .modal-body');
 
 const end = document.querySelector('.end');
 
+const restart = document.querySelector('.restart');
+
 const correctSound = new Audio('sound/correct.mp3');
 const wrongSound = new Audio('sound/wrong.mp3');
 const winSound = new Audio('sound/WIN.mp3');
@@ -121,6 +123,7 @@ end.addEventListener('click', () => {
   modalQuestion.classList.remove('d-block');
   modalBegin.classList.add('d-block');
   start.classList.add('d-none');
+  restart.classList.remove('d-none');
   titleS.innerText = `You got ${correctRate}% of the answers correct.`;
 
   if (correctRate < cutOff) {
