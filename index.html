@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+
+<html lang="en">
+
+<head>
+
+  <meta charset="utf-8" name="viewport" content="width=device-width, initial-scale=1.0">
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.1/dist/css/bootstrap.min.css" rel="stylesheet"
+    integrity="sha384-iYQeCzEYFbKjA/T2uDLTpkwGzCiq6soy8tYaI1GyVh/UjpbCx/TYkiZhlZB6+fzT" crossorigin="anonymous">
+  <link rel="stylesheet" type="text/css" href="style.css">
+  <script src="question.js" defer></script>
+  <script src="app.js" defer></script>
+  <title>BadFakes - A Deepfake Test</title>
+
+</head>
+
+<body>
+
+  <div class="modal modal-lg" tabindex="-1" id="modal-begin">
+    <div class="modal-dialog modal-dialog-centered modal-fullscreen-sm-down">
+      <div class="modal-content">
+
+        <div class="modal-header">
+          <h5 class="modal-title">Welcome to BadFakes</h5>
+        </div>
+
+        <div class="modal-body">
+          <p>BadFakes is a test of your ability to identify Deepfake images and videos. Deepfakes usually refer to
+            videos and images with people's face swapped using AI algorithm. </p>
+          <p> There are 20 questions. Question 1 - 12 are images and 13 - 20 are videos. Some are silent videos. Only
+            half
+            of them is produced with Deepfake applications.</p>
+          <p>I do not own the rights to any sounds/videos/images used in this project. </p>
+        </div>
+
+        <div class="modal-footer">
+          <button type="button" class="btn btn-primary start">Start</button>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div class="modal modal-lg" tabindex="-1" id="modal-question">
+    <div class="modal-dialog modal-dialog-centered">
+      <div class="modal-content">
+
+        <div class="modal-header">
+          <h5 class="modal-title">You</h5>
+          <button type="button" class="btn-close"></button>
+        </div>
+
+        <div class="modal-body">
+          <p>Here is the explanation.</p>
+        </div>
+
+        <div class="modal-footer">
+          <button type="button" class="btn btn-primary next">Next Question</button>
+          <button type="button" class="btn btn-primary end d-none">Final Results</button>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <header class="text-center bg-dark text-bg-dark">
+    <h1 class="">BadFakes</h1>
+  </header>
+
+  <div class="d-flex flex-column wrapper align-items-center justify-content-between ">
+    <div class="small-bar top bg-warning mb-3">0 of 0</div>
+
+    <div class="main-content my-2">
+      <img src="img/pf.jpg" alt="image">
+    </div>
+
+    <div class="buttons d-flex flex-wrap justify-content-center">
+      <button class="btn btn-success rounded-5 py-3 m-1 fw-bold fs-5 real"> Real</button>
+      <button class="btn btn-danger rounded-5 py-3 m-1 fw-bold fs-5 fake"> Deepfake</button>
+    </div>
+
+    <button class="btn btn-warning rounded-5 py-3 m-1 fw-bold fs-5 show d-none">Review Explanation</button>
+
+    <div class="small-bar bot bg-warning mt-3">Correct: </div>
+
+  </div>
+
+</body>
+
+</html>
