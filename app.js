@@ -73,12 +73,14 @@ buttons.addEventListener('click', (e) => {
   const choice = e.target.classList.contains('real') ? 'real' : 'fake';
 
   if (choice === question.ans) {
+    correctSound.currentTime = 0;
     correctSound.play();
     correct += 1;
     titleQ.innerText = 'Correct!';
     titleQ.classList.add('text-success');
     titleQ.classList.remove('text-danger');
   } else {
+    wrongSound.currentTime = 0;
     wrongSound.play();
     titleQ.innerText = 'Incorrect!';
     titleQ.classList.add('text-danger');
